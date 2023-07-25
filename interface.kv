@@ -1,0 +1,32 @@
+<MyBoxLayout>:
+    orientation: 'vertical'
+    spacing: dp(10)
+    padding: dp(10)
+
+    MDTopAppBar:
+        title: 'Q-a Coran'
+        md_bg_color: app.theme_cls.primary_color
+        elevation: 10
+
+ 
+
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.15
+        MDTextField:
+            id: question_input
+            hint_text: "Posez votre question ici"
+            mode: "fill"
+            multiline: True
+            size_hint_x: 0.9
+        MDIconButton:
+            icon: 'send'
+            on_press: root.ask_question()
+
+    MDLabel:
+        id: response_label
+        text: "Réponse ici"
+        halign: 'center'
+        font_style: 'Subtitle1'
+        theme_text_color: 'Primary'
+        size_hint_y: 0.6
